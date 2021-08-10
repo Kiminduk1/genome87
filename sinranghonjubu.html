@@ -1,0 +1,34 @@
+<!doctype html> 
+ <html>  
+     <head>
+<meta charset="utf-8"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+<script src="copy2clipboard.js"></script>
+         <title>신랑혼주(부) 계좌</title> 
+     </head> 
+<body>
+<p style="font-size: 50pt";"font-weight: bold">신랑혼주(부): 국민은행</p>
+</body>
+<body> 
+<textarea style="font-size: 50pt" name="copytextarea" id="copytextarea" rows="1.5" readonly>650702-01-372002</textarea>       
+ <button  style="font-size: 50pt" class="btn" data-clipboard-action="copy" data-clipboard-target="#copytextarea">복사</button>
+<script>
+    if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+        $('.btn').text('복사글 선택');
+        $('.btn').on('click', function(e){
+            select_all_and_copy(document.getElementById("copytextarea"));
+        });
+    } else {
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function(e) {
+            alert('복사 되었습니다.');
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function(e) {
+            alert('선택된 텍스트를 복사하세요.');
+        });
+    }        
+</script>
+</body> 
+</html> 
